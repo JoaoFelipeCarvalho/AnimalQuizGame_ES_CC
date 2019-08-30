@@ -18,8 +18,8 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 public class TelaDesenho extends javax.swing.JPanel {
     BufferedImage carregaImagem;
-    String caminhoBase="src\\br\\univali\\computacao\\jogo\\imagens\\";
-    String arquivo = "nome.png";
+    String caminhoBase="src\\br\\univali\\computacao\\jogo\\gui\\imagens\\";
+    String arquivo = "imgbase.jpg";
     /**
      * Creates new form TelaDesenho
      */
@@ -54,13 +54,9 @@ public class TelaDesenho extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-    public void setImagem(int erros){
+    public void setImagem(){
         String caminho;
-        if (erros==0){
-            caminho=this.caminhoBase;
-        }else{
-            caminho = this.caminhoBase+this.arquivo;
-        }
+        caminho = this.caminhoBase+this.arquivo;
         try {
             this.carregaImagem = ImageIO.read(new File(caminho));
         } catch (IOException ex) {
