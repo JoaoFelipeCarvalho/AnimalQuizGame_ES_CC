@@ -11,6 +11,10 @@ package br.univali.computacao.animais.gui;
  */
 public class PlataformaGUI extends javax.swing.JFrame {
     protected TelaDesenho imagemDasPerguntas;
+    protected TelaOp1 imgOp1;
+    protected TelaOp2 imgOp2;
+    protected TelaOp3 imgOp3;
+    protected TelaOp4 imgOp4;
     
     
     /**
@@ -18,9 +22,23 @@ public class PlataformaGUI extends javax.swing.JFrame {
      */
     public PlataformaGUI() {
         initComponents();
-        /*imagemDasPerguntas = new TelaDesenho();//Usar apenas quando tiver as imagens salvas no pacote
-        this.imagemDasPerguntas.setImagem(0);
-        this.imagemPerguntas.add(imagemDasPerguntas);*/
+        imagemDasPerguntas = new TelaDesenho();//Usar apenas quando tiver as imagens salvas no pacote
+        this.imagemDasPerguntas.setImagem();
+        this.imagemPerguntas.add(imagemDasPerguntas);
+        imgOp1 = new TelaOp1();
+        this.imgOp1.setImagem();
+        this.Opcao1.add(imgOp1);
+        this.Opcao1.setVisible(true);
+        imgOp2 = new TelaOp2();
+        this.imgOp2.setImagem();
+        this.Opcao2.add(imgOp2);
+        imgOp3 = new TelaOp3();
+        this.imgOp3.setImagem();
+        this.Opcao3.add(imgOp3);
+        imgOp4 = new TelaOp4();
+        this.imgOp4.setImagem();
+        this.Opcao4.add(imgOp4);
+        
     }
 
     /**
@@ -32,103 +50,197 @@ public class PlataformaGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Relatorio = new javax.swing.JFrame();
+        TextoRanking = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        palavraSecreta = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        RelatoriosBotton = new javax.swing.JLabel();
+        PainelDaPergunta = new javax.swing.JPanel();
+        Opcao1 = new javax.swing.JPanel();
+        CheckOp1 = new javax.swing.JCheckBox();
+        Opcao2 = new javax.swing.JPanel();
+        CheckOp2 = new javax.swing.JCheckBox();
+        Opcao3 = new javax.swing.JPanel();
+        CheckOp3 = new javax.swing.JCheckBox();
+        Opcao4 = new javax.swing.JPanel();
+        CheckOp4 = new javax.swing.JCheckBox();
         imagemPerguntas = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+
+        TextoRanking.setText("TEste =1");
+
+        javax.swing.GroupLayout RelatorioLayout = new javax.swing.GroupLayout(Relatorio.getContentPane());
+        Relatorio.getContentPane().setLayout(RelatorioLayout);
+        RelatorioLayout.setHorizontalGroup(
+            RelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RelatorioLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(TextoRanking)
+                .addContainerGap(290, Short.MAX_VALUE))
+        );
+        RelatorioLayout.setVerticalGroup(
+            RelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RelatorioLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(TextoRanking)
+                .addContainerGap(246, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Novo jogo");
+        jButton1.setText("Relatorio");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        palavraSecreta.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        RelatoriosBotton.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+
+        javax.swing.GroupLayout PainelDaPerguntaLayout = new javax.swing.GroupLayout(PainelDaPergunta);
+        PainelDaPergunta.setLayout(PainelDaPerguntaLayout);
+        PainelDaPerguntaLayout.setHorizontalGroup(
+            PainelDaPerguntaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 82, Short.MAX_VALUE)
+        );
+        PainelDaPerguntaLayout.setVerticalGroup(
+            PainelDaPerguntaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 186, Short.MAX_VALUE)
+        );
+
+        CheckOp1.setText("jCheckBox5");
+
+        javax.swing.GroupLayout Opcao1Layout = new javax.swing.GroupLayout(Opcao1);
+        Opcao1.setLayout(Opcao1Layout);
+        Opcao1Layout.setHorizontalGroup(
+            Opcao1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Opcao1Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(CheckOp1)
+                .addContainerGap())
+        );
+        Opcao1Layout.setVerticalGroup(
+            Opcao1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Opcao1Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(CheckOp1)
+                .addGap(35, 35, 35))
+        );
+
+        CheckOp2.setText("jCheckBox6");
+
+        javax.swing.GroupLayout Opcao2Layout = new javax.swing.GroupLayout(Opcao2);
+        Opcao2.setLayout(Opcao2Layout);
+        Opcao2Layout.setHorizontalGroup(
+            Opcao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao2Layout.createSequentialGroup()
+                .addComponent(CheckOp2)
+                .addGap(0, 38, Short.MAX_VALUE))
+        );
+        Opcao2Layout.setVerticalGroup(
+            Opcao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao2Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(CheckOp2)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        CheckOp3.setText("jCheckBox7");
+
+        javax.swing.GroupLayout Opcao3Layout = new javax.swing.GroupLayout(Opcao3);
+        Opcao3.setLayout(Opcao3Layout);
+        Opcao3Layout.setHorizontalGroup(
+            Opcao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao3Layout.createSequentialGroup()
+                .addComponent(CheckOp3)
+                .addGap(0, 121, Short.MAX_VALUE))
+        );
+        Opcao3Layout.setVerticalGroup(
+            Opcao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao3Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(CheckOp3)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        CheckOp4.setText("jCheckBox8");
+
+        javax.swing.GroupLayout Opcao4Layout = new javax.swing.GroupLayout(Opcao4);
+        Opcao4.setLayout(Opcao4Layout);
+        Opcao4Layout.setHorizontalGroup(
+            Opcao4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao4Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(CheckOp4)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        Opcao4Layout.setVerticalGroup(
+            Opcao4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Opcao4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(CheckOp4)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout imagemPerguntasLayout = new javax.swing.GroupLayout(imagemPerguntas);
         imagemPerguntas.setLayout(imagemPerguntasLayout);
         imagemPerguntasLayout.setHorizontalGroup(
             imagemPerguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 426, Short.MAX_VALUE)
         );
         imagemPerguntasLayout.setVerticalGroup(
             imagemPerguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 180, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(imagemPerguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(imagemPerguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
-        jCheckBox1.setText("jCheckBox1");
-
-        jCheckBox2.setText("jCheckBox2");
-
-        jCheckBox3.setText("jCheckBox3");
-
-        jCheckBox4.setText("jCheckBox4");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCheckBox1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(palavraSecreta, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addComponent(jCheckBox2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jCheckBox3)
-                                .addGap(105, 105, 105)))
-                        .addComponent(jCheckBox4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(Opcao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(135, 135, 135)
+                                .addComponent(RelatoriosBotton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Opcao3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(Opcao4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(105, 105, 105))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(Opcao2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(imagemPerguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(PainelDaPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(palavraSecreta)
-                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PainelDaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(imagemPerguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                        .addComponent(RelatoriosBotton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Opcao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Opcao4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Opcao3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Opcao2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(44, 44, 44)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -137,7 +249,9 @@ public class PlataformaGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        this.Relatorio.setSize(600, 600);
+        this.Relatorio.setVisible(true);
+        this.TextoRanking.setText("Teste");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
@@ -148,20 +262,26 @@ public class PlataformaGUI extends javax.swing.JFrame {
             }
         });
     }
-    private void desenharTela() {
+    private void desenharPergunta() {
         imagemDasPerguntas = new TelaDesenho();
-        this.imagemDasPerguntas.setImagem(0);
+        this.imagemDasPerguntas.setImagem();
         this.imagemPerguntas.add(imagemDasPerguntas);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox CheckOp1;
+    private javax.swing.JCheckBox CheckOp2;
+    private javax.swing.JCheckBox CheckOp3;
+    private javax.swing.JCheckBox CheckOp4;
+    private javax.swing.JPanel Opcao1;
+    private javax.swing.JPanel Opcao2;
+    private javax.swing.JPanel Opcao3;
+    private javax.swing.JPanel Opcao4;
+    private javax.swing.JPanel PainelDaPergunta;
+    private javax.swing.JFrame Relatorio;
+    private javax.swing.JLabel RelatoriosBotton;
+    private javax.swing.JLabel TextoRanking;
     private javax.swing.JPanel imagemPerguntas;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel palavraSecreta;
     // End of variables declaration//GEN-END:variables
 }
