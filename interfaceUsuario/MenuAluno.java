@@ -1,4 +1,6 @@
 package interfaceUsuario;
+import javax.swing.JOptionPane;
+import usuarios.Aluno;//importar aluno
 
 public class MenuAluno extends javax.swing.JFrame {
     
@@ -123,6 +125,7 @@ public class MenuAluno extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -136,7 +139,21 @@ public class MenuAluno extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        //Botão Jogar
        
-       //deve salver o nome em um objeto aluno
+       Aluno aluno = new Aluno();
+       //se string for "" mostra mensagem
+       if("".equals(jTextField1.getText())){
+          JOptionPane.showMessageDialog(null, "Nome Invalido!");
+       }
+       else{
+           
+           aluno.setNome(jTextField1.getText());
+            
+            
+            //colocor aqui a abertura da Interface do jogo
+            
+             dispose();//encerra esse menu
+             
+       }
       
     }//GEN-LAST:event_jButton2ActionPerformed
 
