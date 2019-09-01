@@ -5,10 +5,21 @@
  */
 package usuarios;
 
-public class Aluno {
+public class Aluno implements Comparable<Aluno> {
     
     private  String nome;
     private int acertos;
+    
+    public Aluno(String nome){
+        this.nome = nome;
+        acertos = 0;
+    }
+    
+    
+    public Aluno(String nome , int novoAcertos){
+        this.nome = nome;
+        acertos = novoAcertos;
+    }
     
     public String getNome(){
         return nome;
@@ -30,4 +41,14 @@ public class Aluno {
         acertos++;
     }
     
+    public int compareTo(Aluno outro) {
+        if (this.getAcertos() > outro.getAcertos()) {
+          return -1;
+        }
+
+        if (this.getAcertos() < outro.getAcertos()) {
+          return 1;
+        }
+        return 0;
+    }
 }
