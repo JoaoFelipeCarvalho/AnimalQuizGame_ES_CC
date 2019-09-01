@@ -1,0 +1,10 @@
+1;Qual destes animais é um mamífero?;0;0
+2;Qual destes animais não é um mamífero?;0;0
+3;Qual destes animais não é aquático?;0;0
+4;Qual destes animais é um pássaro?;0;0
+5;Qual destes animais não é capaz de voar?;0;0
+6;Qual destes animais é um anfébio?;0;0
+7;Qual destes animais é um réptil?;0;0
+8;Qual destes animais não é capaz de escalar árvores?;0;0
+9;Qual destes animais é noturno?;0;0
+10;Qual destes animais não possui chifre?;0;0

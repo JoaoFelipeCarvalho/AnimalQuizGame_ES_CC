@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package br.univali.computacao.animais.gui;
-
+import animalquiz.RankingGUI;
+import animalquiz.RelatorioGUI;
 /**
  *
  * @author 1978233
@@ -52,6 +53,8 @@ public class PlataformaGUI extends javax.swing.JFrame {
 
         Relatorio = new javax.swing.JFrame();
         TextoRanking = new javax.swing.JLabel();
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
         jButton1 = new javax.swing.JButton();
         RelatoriosBotton = new javax.swing.JLabel();
         PainelDaPergunta = new javax.swing.JPanel();
@@ -64,6 +67,7 @@ public class PlataformaGUI extends javax.swing.JFrame {
         Opcao4 = new javax.swing.JPanel();
         CheckOp4 = new javax.swing.JCheckBox();
         imagemPerguntas = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
 
         TextoRanking.setText("TEste =1");
 
@@ -82,6 +86,28 @@ public class PlataformaGUI extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(TextoRanking)
                 .addContainerGap(246, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -191,6 +217,13 @@ public class PlataformaGUI extends javax.swing.JFrame {
             .addGap(0, 180, Short.MAX_VALUE)
         );
 
+        jButton2.setText("Ranking");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -199,6 +232,8 @@ public class PlataformaGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
@@ -241,7 +276,9 @@ public class PlataformaGUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(Opcao2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(44, 44, 44)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap())
         );
 
@@ -249,10 +286,14 @@ public class PlataformaGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.Relatorio.setSize(600, 600);
-        this.Relatorio.setVisible(true);
-        this.TextoRanking.setText("Teste");
+        RelatorioGUI ranking = new RelatorioGUI();
+        ranking.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        RankingGUI ranking = new RankingGUI();
+        ranking.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     public void jogar(){
@@ -283,5 +324,8 @@ public class PlataformaGUI extends javax.swing.JFrame {
     private javax.swing.JLabel TextoRanking;
     private javax.swing.JPanel imagemPerguntas;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
     // End of variables declaration//GEN-END:variables
 }
